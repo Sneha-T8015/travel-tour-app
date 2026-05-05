@@ -4,15 +4,6 @@ from db import db
 from models.tour import Tour
 import os
 
-app = Flask(__name__) 
-
-@app.route("/")
-def home():
-    return "Travel Tour Backend is running!"
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
 app = Flask(__name__)
 CORS(app)
 
@@ -78,24 +69,24 @@ def seed_data():
                 location="Goa",
                 price=7999,
                 days=3,
-                image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
-                description="Enjoy beaches, water sports, and nightlife in Goa."
+                image="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description="Enjoy pristine beaches, thrilling water sports, and vibrant nightlife in Goa."
             ),
             Tour(
                 title="Ooty Hills Tour",
                 location="Ooty",
                 price=5999,
                 days=2,
-                image="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-                description="A relaxing hill-station trip with tea gardens and cool weather."
+                image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description="A relaxing hill-station trip with lush tea gardens, misty mountains, and cool weather."
             ),
             Tour(
                 title="Manali Adventure",
                 location="Manali",
                 price=9999,
                 days=5,
-                image="https://images.unsplash.com/photo-1518002054494-3a6f94352e9d",
-                description="Snow, mountains, and adventure sports in Manali."
+                image="https://images.unsplash.com/photo-1464822759844-d150f39ac1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                description="Experience snow-capped mountains, adventure sports, and serene valleys in Manali."
             )
         ]
 
